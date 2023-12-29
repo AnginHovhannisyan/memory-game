@@ -1,0 +1,102 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background: yellow;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.full{
+	margin: 90px auto;
+	width: 480px;
+	display: flex;
+	flex-wrap: wrap
+}
+
+.d{
+	width: 100px;
+	height: 100px;
+	border: 1px solid black;
+	background: greenyellow;
+	background-size: contain;
+	transition: 0.5s;
+	margin: 10px;
+	font-size: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: move 1s infinite;
+	cursor: pointer;
+}
+
+.card-rotate{
+	background-size: cover;
+	border: 1px solid black;
+	background-color: red;
+	background-repeat: no-repeat;
+	background-position: center;
+	transform: rotateY(180deg);
+	transition: 0.5s;
+}
+
+.cadr-right{
+	background-color: blue;
+}
+
+img{
+	display: none;
+	height: 100px;
+	width: 100px;
+}
+
+.full .card-rotate>img{
+	display: block;
+}
+
+#win{
+	position: absolute;
+    color: #1b8328;
+    text-align: center;
+    font-size: 50px;
+    width: 100%;
+    background-color: #0000004a;
+}
+
+
+.timeFull{
+	display: flex;
+	position: absolute;
+    bottom: 371px;
+    gap: 45px;
+}
+
+#timer {
+/*    margin: 20px;*/
+}
+
+#elapsed-time {
+/*    margin: 20px;*/
+}
+
+#hint {
+/*    margin-top: 10px;*/
+    color: red;
+    font-weight: bold;
+}
+
+#game-over-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
